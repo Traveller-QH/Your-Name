@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="css/style1.css"/>
+        <title>新海诚</title>
+    </head>
+    <style>
+        .tb {
+            margin-top: 25px;
+            position: fixed;
+        }
+
+        body {
+            background: url(image/31.jpg);
+            background-repeat: repeat;
+
+        }
+
+        img {
+
+            transition: all 0.5s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 45px white;
+        }
+    </style>
+
+    <style>
+        #video-container {
+            width: 1500px;
+            height: 1000px;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("img-lbt/三葉（缘）.png");
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        #video {
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 60%;
+        }
+    </style>
+
+    <style type="text/css">
+
+        h3 {
+            font-family: STKaiti,serif;
+            font-weight: bold;
+        }
+
+        p {
+            font-family: KaiTi,serif;
+            color: black;
+        }
+    </style>
+
+    <style>
+        iframe {
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
+
+    <body>
+        <div class="wrapin">
+            <!--头部-->
+            <header>
+
+                <nav class="tb">
+                    <a href="denglu.html">登录</a>
+                    <a href="yingyu.html">电影音乐</a>
+                    <a href="renwu.html">返回人物介绍</a>
+                    <a href="dianying.html">返回电影首页</a>
+                </nav>
+                <audio src="music/没什么大不了.mp3" autoplay loop id="music" style="display: none;"></audio>
+            </header>
+
+            <div class="box1 clearfix">
+                <div class="left">
+                    <img src="image/新海诚.jpg" alt="" style="margin-top: 20px">
+                </div>
+                <div class="text">
+                    <h3>身份背景</h3>
+                    <p>
+                        新海诚（Makoto Shinkai），原名新津诚（Makoto Niitsu），1973年2月9日出生于日本长野县南佐久郡小海町，日本动画导演、编剧、漫画作家，毕业于日本长野县野泽北高等学校、日本中央大学文学部日本文学系。 
+                    </p>
+                    <h3>个人生活</h3>
+                    <p>
+                        新海诚的原名叫新津诚，是日本建筑世家“新津组”的公子。新海诚的妻子是演员三坂知绘子，两人有一个女儿，叫新津世知。 
+                    </p>
+                    <h3>演艺经历</h3>
+                    <p>
+                        新海诚在大学读书期间就加入了日本Falcom游戏会社，1995年大学毕业后加入了该公司，期间他以本名新津诚参与了包括程序、美工、动画与宣传影片制作的多种工作。<br>
+                        在职Falcom期间，新海诚开始了个人动画短片创作。1997年，执导了1分30秒的黑白短片《遥远世界》，该片获得了eAT金沢’98にて特别赏。1998年，拍摄了3D动画短片《被包围的世界》。<br>
+                        2013年5月31日，自编自导的爱情动画电影《言叶之庭》上映，该片获得了斯图加特国际动画电影节长篇部门最优秀奖。<br>
+                        2016年8月26日，自编自导的动画电影《你的名字。》上映，该片由神木隆之介、上白石萌音担任主要配音，新海诚凭借该片获得了第40届日本电影学院奖最佳编剧奖及第26届日本电影评论家大奖最佳导演奖；11月3日，获得了第29届东京国际电影节感谢奖。<br>
+                        2018年12月，新海诚担任导演、编剧、原作的动画长片《天气之子》曝光主视觉海报，并定档2019年7月19日在日本上映。<br>
+                        2022年执导的电影《铃芽之旅》11月11日于日本上映。首周末三天本土票房收获19.1亿日元（1370万美元）。<br>
+                        2023年4月28日，参加的《众声》播出。<br>
+                        ................... 
+                    <h3>人物评价</h3>
+                    <p>
+                        从《星之声》到《铃芽之旅》，新海诚的创作保守而稳定，他没有引领行业的伟大理想，也从不自认为是个艺术家，他更像是一个由爱好者转型成导演的人，独立于体系之外，可以放心地为自己的受众创作，让他们走进电影院，获得浅层的情感疗愈，这是他在商业上成功的关键。（CCTV电影频道《今日影评》评） 
+                    </p>
+                    <a href="https://baike.baidu.com/item/%E6%96%B0%E6%B5%B7%E8%AF%9A/2722278">查看更多</a>
+                    <a href="#" id="play-btn" style="margin-left: 175px">仅此98秒</a>
+                </div>
+            </div>
+
+            <div class="list">
+                <iframe src="lunbotu.html" frameborder="0"></iframe>
+            </div>
+
+            <div id="video-container">
+                <video id="video" controls>
+                    <source src="img-lbt/【4K】“仅此98秒”带你感受新海诚那些无法超越绝美的画面.mp4" type="video/mp4">
+                </video>
+            </div>
+            <script>
+                let music = document.getElementById('music');
+                let videoContainer = document.getElementById('video-container');
+                let video = document.getElementById('video');
+
+                video.addEventListener('play', function() {
+                    music.pause();
+                });
+
+                video.addEventListener('ended', function() {
+                    music.play();
+                });
+
+                document.getElementById('play-btn').addEventListener('click', function() {
+                    videoContainer.style.display = 'block';
+                    music.pause();
+                    video.play();
+                });
+
+                videoContainer.addEventListener('click', function(e) {
+                    if (e.target.id === 'video-container') {
+                        videoContainer.style.display = 'none';
+                        video.pause();
+                        music.play();
+                    }
+                });
+
+            </script>
+
+            <!--底部-->
+            <footer>
+                新海诚
+            </footer>
+        </div>
+    </body>
+</html>

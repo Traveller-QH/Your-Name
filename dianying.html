@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="html lang=zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>你的名字</title>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: "楷体";
+            }
+
+            header {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/1.png);
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+            }
+
+            ul {
+                float: right;
+                list-style-type: none;
+                margin: 15px;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+            ul li a {
+                text-decoration: none;
+                color: #fff;
+                padding: 5px 20px;
+                border: 1px solid transparent;
+                transition: .6s ease;
+                border-radius: 20px;
+            }
+
+            ul li a:hover {
+                background-color: #fff;
+                color: #000;
+                box-shadow: 2px 2px 15px palevioletred;
+            }
+
+            ul li.active a {
+                background-color: #fff;
+                color: #000;
+            }
+
+            .title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .title h1 {
+                color: #fff;
+                font-size: 70px;
+                font-family: Century;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="main">
+                <ul>
+                    <li class="active"><a href="dianying.html">首页</a></li>
+                    <li><a href="juqing.html">剧情介绍</a></li>
+                    <li><a href="renwu.html">人物介绍</a></li>
+                    <li><a href="yingyu.html">音乐</a></li>
+                    <li><a href="tupian.html">图片欣赏</a></li>
+                    <li><a href="sucai.html">绝美瞬间</a></li>
+                    <li><a href="denglu.html">登录</a></li>
+                    <li><a href="xinhaicheng.html">作者</a></li>
+                    <li><a href="zuozhe.html">关于</a></li>
+
+
+                </ul>
+            </div>
+            <div class="title">
+                <h1><span id="btnSwitchAudio" style="color: rgb(20, 90, 220); cursor: pointer">你的</span> <span style="cursor: pointer" id="pause">名字</span></h1>
+            </div>
+
+            <!--<embed src="music/火花.mp3" hidden="true" autostart="true" loop="true">-->
+        </header>
+        <audio id="audioPlayer" preload="auto">
+            <source src="" type="audio/mpeg">
+        </audio>
+        <script>
+            let currentAudioIndex = 0; // 当前播放的音频索引
+            let audioFiles = ['music/梦灯笼.mp3', 'music/没什么大不了.mp3', 'music/火花.mp3']; // 音频文件列表
+            let audioPlayer = document.getElementById('audioPlayer'); // 获取音频播放器元素
+            document.getElementById('btnSwitchAudio').addEventListener('click', function() {
+                currentAudioIndex++; // 递增索引以切换到下一个音频
+                if (currentAudioIndex >= audioFiles.length) { // 如果超出音频列表长度，重置为第一个音频
+                    currentAudioIndex = 0;
+                }
+                audioPlayer.src = audioFiles[currentAudioIndex]; // 设置音频源为当前音频文件
+                audioPlayer.play(); // 开始播放当前音频
+            });
+
+            // 获取音频元素和span元素
+            let audio = document.getElementById('audioPlayer');
+            let span = document.getElementById('pause');
+            // 添加点击事件监听器到span元素
+            span.addEventListener('click', function() {
+                // 判断音频当前是否正在播放
+                if (audio.paused) {
+                    // 如果暂停了，则播放音频
+                    audio.play();
+                } else {
+                    // 如果正在播放，则暂停音频
+                    audio.pause();
+                }
+            });
+        </script>
+    </body>
+</html>

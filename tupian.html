@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="html lang=zh-cmn-Hans">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>图片欣赏</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: pink;
+            }
+
+            .shell {
+                width: 90%;
+                height: 700px;
+                display: flex;
+            }
+
+            .box {
+                flex: 1;
+                overflow: hidden;
+                transition: 0.8s;
+                margin: 0 20px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+                border-radius: 20px;
+                border: 10px solid #fff;
+                background-color: #fff;
+            }
+
+            .box > img {
+                width: 200%;
+                height: 85%;
+                object-fit: cover;
+                transition: .5s;
+            }
+
+            .box > span {
+                font: 200 45px '优设标题黑';
+                text-align: center;
+                height: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .box:hover {
+                flex-basis: 40%;
+            }
+
+            .box:hover > img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="shell">
+            <div class="box">
+                <img src="image/4.png">
+                <span>聚结成状</span>
+            </div>
+            <div class="box">
+                <img src="image/5.png">
+                <span>交错纠缠</span>
+            </div>
+            <div class="box">
+                <img src="image/6.png">
+                <span>时而回转</span>
+            </div>
+            <div class="box">
+                <img src="image/7.png">
+                <span>中断</span>
+            </div>
+            <div class="box">
+                <img src="image/11.png">
+                <span>却又再次续接</span>
+            </div>
+        </div>
+    </body>
+</html>
